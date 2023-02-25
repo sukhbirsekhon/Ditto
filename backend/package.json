@@ -1,0 +1,24 @@
+{
+  "name": "ditto",
+  "version": "1.0.0",
+  "description": "Summarize Speech and share it with your friends",
+  "main": "index.js",
+  "start":"node index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukhbirsekhon/Ditto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukhbirsekhon/Ditto/issues"
+  },
+  "homepage": "https://github.com/sukhbirsekhon/Ditto#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
