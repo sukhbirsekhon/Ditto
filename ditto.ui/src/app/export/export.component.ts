@@ -9,8 +9,7 @@ import { SummarizationService } from '../summarization.service';
 export class ExportComponent implements OnInit {
   displayData: string = '';
 
-  constructor(public summarize: SummarizationService) {
-  }
+  constructor(public summarize: SummarizationService) {}
 
   ngOnInit(): void {
     this.displayData = localStorage.getItem('text')!;
@@ -22,7 +21,7 @@ export class ExportComponent implements OnInit {
   html() {
     var textToWrite = document.getElementById('grabdata')!.innerHTML;
     var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
-    var fileNameToSaveAs = 'MyWritrr.html';
+    var fileNameToSaveAs = 'DittoExport.html';
     var downloadLink = document.createElement('a');
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = 'download';
@@ -47,7 +46,7 @@ export class ExportComponent implements OnInit {
     }
   }
 
-  onSummarize() {
+  Onsummarize() {
     this.summarize.summarize(this.displayData);
   }
 }
