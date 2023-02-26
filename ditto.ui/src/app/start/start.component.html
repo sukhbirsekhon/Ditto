@@ -34,13 +34,18 @@
   </div>
   <div class="acon">
     <div class="boxcenter">
-      <mat-icon class="largeicon noastyle">play_circle_outline</mat-icon>
+      <a (click)="startRecord()">
+        <mat-icon class="largeicon noastyle">play_circle_outline</mat-icon>
+      </a>
+      <p>Record</p>
       <br /><br /><br />
       <mat-icon class="largeicon noastyle">arrow_right_alt</mat-icon>
+      <p>Proceed</p>
       <br /><br /><br />
       <a href="/"
         ><mat-icon class="largeicon noastyle">exit_to_app</mat-icon></a
       >
+      <p>Quit</p>
     </div>
   </div>
 </div>
