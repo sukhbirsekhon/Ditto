@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SummarizationService } from '../summarization.service';
 
 @Component({
   selector: 'app-export',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExportComponent implements OnInit {
   displayData: string = '';
+
+  constructor(public summarize: SummarizationService) {
+  }
 
   ngOnInit(): void {
     this.displayData = localStorage.getItem('text')!;
@@ -43,7 +47,7 @@ export class ExportComponent implements OnInit {
     }
   }
 
-  summerize() {
-    alert('Coming Soon');
+  onSummarize() {
+    this.summarize.summarize(this.displayData);
   }
 }

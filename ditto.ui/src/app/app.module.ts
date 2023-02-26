@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -11,6 +10,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { StartComponent } from './start/start.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ExportComponent } from './export/export.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,8 @@ import { ExportComponent } from './export/export.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
+    HttpClientModule,
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent],
