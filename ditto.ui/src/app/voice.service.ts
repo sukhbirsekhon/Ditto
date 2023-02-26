@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 declare var webkitSpeechRecognition: any;
 
 @Injectable({
   providedIn: 'root',
 })
-export class VoiceService {
+export class VoiceService implements OnInit {
   recognition = new webkitSpeechRecognition();
   isStoppedSpeechRecog = false;
   public text = '';
   tempWords!: string;
 
   constructor() {}
+
+  ngOnInit(): void {}
 
   init() {
     this.recognition.interimResults = true;

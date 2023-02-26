@@ -1,3 +1,4 @@
+import { ExportComponent } from './export/export.component';
 import { StartComponent } from './start/start.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'start', component: StartComponent },
+  { path: 'done', component: ExportComponent },
 ];
 
 @NgModule({

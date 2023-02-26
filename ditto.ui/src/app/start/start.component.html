@@ -1,7 +1,7 @@
 <div class="topbar">
   <div class="topbartext">
     <span style="font-weight: 300; margin-left: 10px; font-size: 1.4em"
-      >Ditto - Live
+      >Ditto - Studio
     </span>
   </div>
 </div>
@@ -14,11 +14,15 @@
   <div class="acon">
     <div class="boxcenter">
       <a (click)="startRecord()">
-        <mat-icon class="largeicon noastyle">play_circle_outline</mat-icon>
+        <mat-icon class="largeicon noastyle" id="change">{{
+          icontext
+        }}</mat-icon>
       </a>
       <p>Record</p>
       <br /><br /><br />
-      <mat-icon class="largeicon noastyle">arrow_right_alt</mat-icon>
+      <a (click)="proceed()" href="/done">
+        <mat-icon class="largeicon noastyle">arrow_right_alt</mat-icon>
+      </a>
       <p>Proceed</p>
       <br /><br /><br />
       <a href="/"

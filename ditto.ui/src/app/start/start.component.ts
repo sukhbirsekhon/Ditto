@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VoiceService } from '../voice.service';
 
 @Component({
@@ -7,10 +7,14 @@ import { VoiceService } from '../voice.service';
   styleUrls: ['./start.component.css'],
   providers: [VoiceService],
 })
-export class StartComponent {
+export class StartComponent implements OnInit {
   speech: boolean = false;
 
   text: string = '';
+
+  icontext: string = 'play_circle_outline';
+
+  ngOnInit(): void {}
 
   constructor(public service: VoiceService) {
     this.service.init();
@@ -19,8 +23,10 @@ export class StartComponent {
   startRecord() {
     if (this.speech == true) {
       this.speech = false;
+      this.icontext = 'play_circle_outline';
     } else {
       this.speech = true;
+      this.icontext = 'pause_presentation';
     }
 
     if (this.speech == true) {
@@ -28,5 +34,9 @@ export class StartComponent {
     } else {
       this.service.stop();
     }
+  }
+
+  proceed() {
+    localStorage.setItem('text', this.service.text);
   }
 }

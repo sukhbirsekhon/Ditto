@@ -10,6 +10,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { StartComponent } from './start/start.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ExportComponent } from './export/export.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
     AboutPageComponent,
     ContactPageComponent,
     StartComponent,
+    ExportComponent,
   ],
   imports: [
     BrowserModule,
