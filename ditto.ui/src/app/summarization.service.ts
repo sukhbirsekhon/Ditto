@@ -16,7 +16,7 @@ export class SummarizationService {
     };
 
     this.http.get("",
-    options).subscribe(response => {
+    ).subscribe(response => {
       console.log(response)
     })
 
