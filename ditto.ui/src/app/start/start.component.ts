@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
+import { VoiceService } from '../voice.service';
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.css'],
+  providers: [VoiceService],
 })
 export class StartComponent {
   speech: boolean = false;
 
-  ngOnInit() {}
+  text: string = '';
+
+  constructor(public service: VoiceService) {
+    this.service.init();
+  }
 
   startRecord() {
     if (this.speech == true) {
@@ -18,6 +24,9 @@ export class StartComponent {
     }
 
     if (this.speech == true) {
+      this.service.start();
+    } else {
+      this.service.stop();
     }
   }
 }
